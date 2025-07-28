@@ -36,6 +36,14 @@ contract SimpleStorage{
     //     return a + b;
     // }
 
+    uint256 public favoriteNumber;
+    function store(uint256 _favoriteNumber) public {
+        favoriteNumber = _favoriteNumber;
+    }
+    
+    function retrieve() public view returns (uint256){
+        return favoriteNumber;
+    }
 
     mapping(string => uint256) public nameToAge;
 
